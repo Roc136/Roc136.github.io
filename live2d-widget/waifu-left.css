@@ -5,9 +5,9 @@
 	color: #fff;
 	cursor: pointer;
 	font-size: 12px;
-	right: 0;
+	left: 0;
 	margin-left: -100px;
-	padding: 5px 2px 5px 5px;
+	padding: 5px 0px 5px 10px;
 	position: fixed;
 	transition: margin-left 1s;
 	width: 60px;
