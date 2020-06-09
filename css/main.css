@@ -1927,7 +1927,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4dd459;
+  background: #cfcbff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2049,7 +2049,8 @@ img:hover {
 }
 .footer {
   font-size: 14px;
-  color: #999;
+  color: #fff;
+  opacity: 0.9;
 }
 .footer img {
   border: none;
@@ -3225,10 +3226,36 @@ img:hover {
     margin: 8px 0 0;
   }
 }
+body {
+  background: url("https://images7.alphacoders.com/103/1030338.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+.main-inner {
+  background: #2078bf;
+  opacity: 0.85;
+}
+.header-inner {
+  opacity: 0.85;
+}
+.site-meta {
+  background: url("http://img2.1sucai.com/190519/330863-1Z51ZQ23716.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+}
+.brand {
+  color: #91fafe;
+}
+.site-subtitle {
+  color: #91fafe;
+}
 .post {
   margin-top: 60px;
   margin-bottom: 60px;
   padding: 10px;
-  -webkit-box-shadow: 0 0 10px rgba(202,203,203,0.5);
-  -moz-box-shadow: 0 0 10px rgba(202,203,204,0.5);
+  -webkit-box-shadow: 0 0 10px #cacbcb;
+  -moz-box-shadow: 0 0 10px #cacbcc;
 }
