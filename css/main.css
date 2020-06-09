@@ -1662,7 +1662,6 @@ pre .javascript .function {
 .sidebar {
   position: fixed;
   right: 0;
-  top: 0;
   bottom: 0;
   width: 0;
   z-index: 1040;
@@ -1927,7 +1926,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b14561;
+  background: #221c6f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3241,10 +3240,12 @@ body {
   opacity: 0.85;
 }
 .site-meta {
-  background: url("http://img2.1sucai.com/190519/330863-1Z51ZQ23716.jpg");
+  background: url("https://images5.alphacoders.com/103/1033113.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0% 0%;
+  opacity: 1;
+  background-position: 50% 63%;
+  height: 40px;
 }
 .brand {
   color: #91fafe;
@@ -3253,9 +3254,9 @@ body {
   color: #91fafe;
 }
 .post {
-  margin-top: 60px;
-  margin-bottom: 60px;
-  padding: 10px;
-  -webkit-box-shadow: 0 0 10px #cacbcb;
-  -moz-box-shadow: 0 0 10px #cacbcc;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  padding: 5px;
+  -webkit-box-shadow: 0 0 5px #cacbcb;
+  -moz-box-shadow: 0 0 5px #cacbcc;
 }
