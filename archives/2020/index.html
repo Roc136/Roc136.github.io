@@ -571,7 +571,7 @@
                 alt="Roc" />
             
               <p class="site-author-name" itemprop="name">Roc</p>
-              <p class="site-description motion-element" itemprop="description">刚开始学习写博客，会把日常的一些笔记放在这里以供日后查看，目前还在制作阶段。另外，所有内容不能保证时效性和准确性，还请各位看官多多指出错误，</p>
+              <p class="site-description motion-element" itemprop="description">        刚开始学习写博客，会把日常的一些笔记放在这里以供日后查看，目前还在制作阶段。另外，所有内容不能保证时效性和准确性，还请各位看官多多指出错误，</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -836,11 +836,14 @@
 
 
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <!--原生valine-->
+  <!--<script src="//unpkg.com/valine/dist/Valine.min.js"></script>-->
+  <!--魔改的valine-->
+  <script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
   
   <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
-    var guest = 'nick';
+    var guest = 'nick,mail,link';
     guest = guest.split(',').filter(item=>{
       return GUEST.indexOf(item)>-1;
     });
