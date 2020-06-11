@@ -86,6 +86,7 @@
 
 
 
+
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
@@ -174,7 +175,10 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.5.0/css/fontawesome.css" rel="stylesheet">-->
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
   <!--看板娘-->
   
     <script src="/live2d-widget/autoload.js"></script>
@@ -965,6 +969,7 @@ var jiathis_config={
   <!--魔改的valine-->
   <script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
   
+  
   <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
     var guest = 'nick,mail,link';
@@ -981,6 +986,11 @@ var jiathis_config={
         avatar:'mm',
         guest_info:guest,
         pageSize:'10' || 10,
+        master: "3423adf647c52b32003620763c56160a",
+        friends: "85cd54eff01ac6caf5d8da45586b3170,061b9d2f8239e08430741d4025921550",
+        tagMeta: ["博主", "小伙伴", "访客"],
+        metaPlaceholder: {"nick": "昵称/QQ号(必填)","mail": "邮箱(会收到回复哦~)","link": "网址(放上你的博客地址~)"},
+        enableQQ: "true",
     });
   </script>
 
@@ -1133,15 +1143,29 @@ var jiathis_config={
 </script>
 
 
-  <!-- 页面点击小红心 -->
+
+
+  <script src="/js/src/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = true;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+
   
-    <script type="text/javascript" src="/js/src/clicklove.js"></script>
-  
-  <!-- 页面点击爆炸 -->
-  
-   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+    <!-- 页面点击小红心 -->
+    
+      <script type="text/javascript" src="/js/src/clicklove.js"></script>
+    
+    <!-- 页面点击爆炸 -->
+    
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/src/fireworks.js"></script>
+    
+    <!-- 页面点击文字-->
+    
   
   </body>
 </html>
