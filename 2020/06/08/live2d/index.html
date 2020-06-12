@@ -118,14 +118,14 @@
 
 
 
-<meta name="description" content="本文针对GitHub上张书樵大佬(点击打开他的博客)的看板娘的一些可能的坑做一些补充 具体实现方法网上有很多，这里不做具体介绍，附上这位大佬自己写的： 在网页中添加Live2D看板娘 1、配置好后只显示按钮和文字，不显示人物有两种可能性： 1）自己搭的api服务器不支持跨域为服务器增加跨域许可，具体方法可以看我的另一篇文章 Nginx通过CROS实现跨域 2）This request has be">
+<meta name="description" content="本文针对GitHub上张书樵大佬的看板娘的一些可能的坑做一些补充。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="live2d看板娘配置的一些坑">
 <meta property="og:url" content="https://roc136.github.io/2020/06/08/live2d/index.html">
 <meta property="og:site_name" content="RocSpace">
-<meta property="og:description" content="本文针对GitHub上张书樵大佬(点击打开他的博客)的看板娘的一些可能的坑做一些补充 具体实现方法网上有很多，这里不做具体介绍，附上这位大佬自己写的： 在网页中添加Live2D看板娘 1、配置好后只显示按钮和文字，不显示人物有两种可能性： 1）自己搭的api服务器不支持跨域为服务器增加跨域许可，具体方法可以看我的另一篇文章 Nginx通过CROS实现跨域 2）This request has be">
+<meta property="og:description" content="本文针对GitHub上张书樵大佬的看板娘的一些可能的坑做一些补充。">
 <meta property="article:published_time" content="2020-06-08T12:27:20.000Z">
-<meta property="article:modified_time" content="2020-06-09T03:45:08.346Z">
+<meta property="article:modified_time" content="2020-06-12T09:46:06.743Z">
 <meta property="article:author" content="Roc">
 <meta property="article:tag" content="博客搭建">
 <meta name="twitter:card" content="summary">
@@ -138,7 +138,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -467,6 +467,10 @@
           
 
           
+              <div class="post-description">
+                  本文针对GitHub上张书樵大佬的看板娘的一些可能的坑做一些补充。
+              </div>
+          
 
         </div>
       </header>
@@ -515,7 +519,7 @@
   <p><span>本文标题:</span><a href="/2020/06/08/live2d/">live2d看板娘配置的一些坑</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Roc 的个人博客">Roc</a></p>
   <p><span>发布时间:</span>2020年06月08日 - 20:27</p>
-  <p><span>最后更新:</span>2020年06月09日 - 11:45</p>
+  <p><span>最后更新:</span>2020年06月12日 - 17:46</p>
   <p><span>原始链接:</span><a href="/2020/06/08/live2d/" title="live2d看板娘配置的一些坑">https://roc136.github.io/2020/06/08/live2d/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://roc136.github.io/2020/06/08/live2d/"  aria-label="复制成功！"></i></span>
   </p>
@@ -757,6 +761,13 @@ var jiathis_config={
       
 
       
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -826,11 +837,6 @@ var jiathis_config={
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -1123,6 +1129,28 @@ var jiathis_config={
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

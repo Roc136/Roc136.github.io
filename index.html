@@ -135,7 +135,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -483,16 +483,10 @@
 
       
         
-          
-          本文针对GitHub上张书樵大佬(点击打开他的博客)的看板娘的一些可能的坑做一些补充
-具体实现方法网上有很多，这里不做具体介绍，附上这位大佬自己写的：
-在网页中添加Live2D看板娘
-1、配置好后只显示按钮和文字，不显示人物有两种可能性：
-1）自己搭的api服务器不支持跨域为服务器增加跨域许可，具体
-          ...
+          本文针对GitHub上张书樵大佬的看板娘的一些可能的坑做一些补充。
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/06/08/live2d/#more" rel="contents">
+            <a class="btn" href="/2020/06/08/live2d/">
               阅读全文 &raquo;
             </a>
           </div>
@@ -692,16 +686,10 @@
 
       
         
-          
-          编辑nginx配置
-1vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf
-
-在server中添加index，如下
-12345678910111213141516171819202122232425server &#123;    location &#x2F; &#12
-          ...
+          网页访问通常会省略index.html,index.php等，通过修改nginx的配置文件实现支持。
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/06/08/php-hide-index/#more" rel="contents">
+            <a class="btn" href="/2020/06/08/php-hide-index/">
               阅读全文 &raquo;
             </a>
           </div>
@@ -901,13 +889,10 @@
 
       
         
-          
-          什么是CORSCORS是一个W3C标准，全称是跨域资源共享(Cross-origin resource sharing)。它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。
-当前几乎所有的浏览器(Internet Explorer 8+， Fire
-          ...
+          转载一篇关于nginx配置cros实现跨域支持的文章方便学习。
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/06/08/cros/#more" rel="contents">
+            <a class="btn" href="/2020/06/08/cros/">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1457,6 +1442,13 @@
       
 
       
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -1526,11 +1518,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -1819,6 +1806,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

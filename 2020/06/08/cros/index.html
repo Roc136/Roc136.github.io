@@ -118,15 +118,15 @@
 
 
 
-<meta name="description" content="什么是CORSCORS是一个W3C标准，全称是跨域资源共享(Cross-origin resource sharing)。它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。 当前几乎所有的浏览器(Internet Explorer 8+， Firefox 3.5+， Safari 4+和 Chrome 3+)都可通过名为跨域资源共享(Cross-">
+<meta name="description" content="转载一篇关于nginx配置cros实现跨域支持的文章方便学习。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nginx通过CROS实现跨域">
 <meta property="og:url" content="https://roc136.github.io/2020/06/08/cros/index.html">
 <meta property="og:site_name" content="RocSpace">
-<meta property="og:description" content="什么是CORSCORS是一个W3C标准，全称是跨域资源共享(Cross-origin resource sharing)。它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。 当前几乎所有的浏览器(Internet Explorer 8+， Firefox 3.5+， Safari 4+和 Chrome 3+)都可通过名为跨域资源共享(Cross-">
+<meta property="og:description" content="转载一篇关于nginx配置cros实现跨域支持的文章方便学习。">
 <meta property="og:image" content="https://www.hi-linux.com/img/linux/cors_server_flowchart.png">
 <meta property="article:published_time" content="2020-06-08T12:21:08.000Z">
-<meta property="article:modified_time" content="2020-06-11T07:32:26.181Z">
+<meta property="article:modified_time" content="2020-06-12T09:47:26.792Z">
 <meta property="article:author" content="Roc">
 <meta property="article:tag" content="nginx">
 <meta property="article:tag" content="cros">
@@ -142,7 +142,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -470,6 +470,10 @@
             </div>
           
 
+          
+              <div class="post-description">
+                  转载一篇关于nginx配置cros实现跨域支持的文章方便学习。
+              </div>
           
 
         </div>
@@ -858,6 +862,13 @@ var jiathis_config={
       
 
       
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -927,11 +938,6 @@ var jiathis_config={
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -1224,6 +1230,28 @@ var jiathis_config={
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
