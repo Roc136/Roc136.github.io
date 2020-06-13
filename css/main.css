@@ -1922,7 +1922,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a4b6d6;
+  background: #ff886e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3075,6 +3075,22 @@ img:hover {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.music1 {
+  width: 260px;
+  -webkit-transform: translate(-8%, 0%);
+  -moz-transform: translate(-8%, 0%);
+  -ms-transform: translate(-8%, 0%);
+  -o-transform: translate(-8%, 0%);
+  transform: translate(-8%, 0%);
+}
+.music2 {
+  width: 238px;
+  -webkit-transform: translate(-4%, 0%);
+  -moz-transform: translate(-4%, 0%);
+  -ms-transform: translate(-4%, 0%);
+  -o-transform: translate(-4%, 0%);
+  transform: translate(-4%, 0%);
 }
 .content-wrap {
   padding: initial;

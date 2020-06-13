@@ -27,6 +27,7 @@
     }
 </style>
 -->
+
 <script>
     (function () {
         if ('') {
@@ -178,11 +179,18 @@
   <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css" rel="stylesheet">
   <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.5.0/css/fontawesome.css" rel="stylesheet">-->
   <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
   <!--看板娘-->
   
     <script src="/live2d-widget/autoload.js"></script>
     <!--<script src="assets/autoload.js?v=1.4.2"></script>-->
   
+
+  <!--pjax：防止跳转页面音乐暂停-->
+  
+    <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script>
+  
+
 <meta name="generator" content="Hexo 4.2.1"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -489,21 +497,48 @@
           
 
           
-
         </div>
       </section>
 
+      
+      
+      <!--背景音乐-->
+      
+        <br/>
+        
+        
+          <!-- require APlayer -->
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+          <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+          <!-- require MetingJS-->
+          <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script> 
+          <!--网易云-->
+          <div class="music2">
+            <div class="aplayer"
+              data-id="5062858339"
+              data-server="netease"
+              data-type="playlist"
+              data-fixed="false"
+              data-autoplay="true"
+              data-list-folded="true"
+              data-mutex="true"
+              data-order="list"
+              data-volume="0.2"
+              data-theme="#FADFA3"
+              date-preload="auto">
+            </div>
+          </div>
+        
       
 
       
         <div class="back-to-top">
           <i class="fa fa-arrow-up"></i>
           
-            <span id="scrollpercent"><span>0</span>%</span>
+            <span id="scrollpercent"><span>0</span>%</span><br/>
           
         </div>
       
-
     </div>
   </aside>
 
