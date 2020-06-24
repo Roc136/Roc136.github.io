@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Allow: /2020/
+Allow: /posts/
 Allow: /about/
 Allow: /categories/
 Allow: /tags/
