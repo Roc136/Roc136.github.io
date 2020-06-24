@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://roc136.github.io/2020/06/20/blog-building/beautify-3/</loc>
-    <lastmod>2020-06-20</lastmod>
+    <loc>https://roc136.github.io/posts/blog-building/beautify-4/</loc>
+    <lastmod>2020-06-24</lastmod>
   </url>  <url>
-    <loc>https://roc136.github.io/2020/06/16/blog-building/beginning/</loc>
+    <loc>https://roc136.github.io/posts/blog-building/beautify-3/</loc>
+    <lastmod>2020-06-24</lastmod>
+  </url>  <url>
+    <loc>https://roc136.github.io/posts/blog-building/beautify-2/</loc>
+    <lastmod>2020-06-24</lastmod>
+  </url>  <url>
+    <loc>https://roc136.github.io/posts/blog-building/beautify-1/</loc>
+    <lastmod>2020-06-24</lastmod>
+  </url>  <url>
+    <loc>https://roc136.github.io/posts/blog-building/beginning/</loc>
     <lastmod>2020-06-18</lastmod>
   </url>  <url>
-    <loc>https://roc136.github.io/2020/06/18/blog-building/beautify-2/</loc>
-    <lastmod>2020-06-18</lastmod>
-  </url>  <url>
-    <loc>https://roc136.github.io/2020/06/17/blog-building/beautify-1/</loc>
-    <lastmod>2020-06-18</lastmod>
-  </url>  <url>
-    <loc>https://roc136.github.io/2020/06/08/live2d/</loc>
+    <loc>https://roc136.github.io/posts/live2d/</loc>
     <lastmod>2020-06-16</lastmod>
   </url>  <url>
-    <loc>https://roc136.github.io/2020/06/08/php-hide-index/</loc>
+    <loc>https://roc136.github.io/posts/php-hide-index/</loc>
     <lastmod>2020-06-12</lastmod>
   </url>  <url>
-    <loc>https://roc136.github.io/2020/06/08/cros/</loc>
+    <loc>https://roc136.github.io/posts/cros/</loc>
     <lastmod>2020-06-12</lastmod>
   </url>
 </urlset>

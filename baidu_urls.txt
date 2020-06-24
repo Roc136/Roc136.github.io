@@ -1,2 +1,8 @@
-https://roc136.github.io/2020/06/20/blog-building/beautify-3/
-https://roc136.github.io/2020/06/18/blog-building/beautify-2/
+https://roc136.github.io/posts/blog-building/beautify-4/
+https://roc136.github.io/posts/blog-building/beautify-3/
+https://roc136.github.io/posts/blog-building/beautify-2/
+https://roc136.github.io/posts/blog-building/beautify-1/
+https://roc136.github.io/posts/blog-building/beginning/
+https://roc136.github.io/posts/php-hide-index/
+https://roc136.github.io/posts/live2d/
+https://roc136.github.io/posts/cros/
