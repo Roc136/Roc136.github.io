@@ -2009,7 +2009,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6377ff;
+  background: #ffa1d4;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2129,10 +2129,13 @@ img:hover {
 .post-toc .nav .active-current > a:hover {
   color: #fc6423;
 }
+:root {
+  --footer-color: #1e1e1e;
+}
 .footer {
   font-size: 14px;
-  color: #fff;
-  opacity: 0.9;
+  color: var(--footer-color);
+  opacity: 1;
 }
 .footer img {
   border: none;
@@ -3349,7 +3352,7 @@ img:hover {
   transform: translate(-4%, 0%);
 }
 body {
-  background: url("https://images7.alphacoders.com/103/1030338.jpg");
+  background-image: var(--bgurl);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -3369,9 +3372,10 @@ body {
   opacity: 1;
   background-position: 50% 63%;
   height: 40px;
+  opacity: 0.8;
 }
 .brand {
-  color: #91fafe;
+  color: #6a005f;
 }
 .site-subtitle {
   color: #91fafe;
