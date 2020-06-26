@@ -2009,7 +2009,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffa1d4;
+  background: #476560;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3351,6 +3351,11 @@ img:hover {
   -o-transform: translate(-4%, 0%);
   transform: translate(-4%, 0%);
 }
+:root {
+--bgurl
+  --brand-color: #6a005f;
+  --site-meta-color: #000;
+}
 body {
   background-image: var(--bgurl);
   background-size: cover;
@@ -3366,7 +3371,7 @@ body {
   opacity: 0.85;
 }
 .site-meta {
-  background: url("https://images5.alphacoders.com/103/1033113.png");
+  background: var(--site-meta-color);
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 1;
@@ -3375,7 +3380,7 @@ body {
   opacity: 0.8;
 }
 .brand {
-  color: #6a005f;
+  color: var(--brand-color);
 }
 .site-subtitle {
   color: #91fafe;
