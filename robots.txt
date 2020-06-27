@@ -18,3 +18,5 @@ Disallow: /categories/
 
 Sitemap: https://roc136.github.io/sitemap.xml
 Sitemap: http://roc136.github.io/baidusitemap.xml
+Sitemap: https://blog.roc136.top/sitemap.xml
+Sitemap: http://blog.roc136.top/baidusitemap.xml
