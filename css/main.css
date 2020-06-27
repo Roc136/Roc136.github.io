@@ -2009,7 +2009,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #55ff04;
+  background: #4614c8;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3396,7 +3396,7 @@ body {
   -moz-box-shadow: 0 0 5px #cacbcc;
 }
 code {
-  color: #ce8349;
+  color: #eee;
   background: #21252b;
   opacity: 0.8;
   margin: 2px;
