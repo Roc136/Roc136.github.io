@@ -2009,7 +2009,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff1ff;
+  background: #3488d2;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3499,7 +3499,7 @@ pre {
   opacity: 1;
 }
 #veditor {
-  height: 150px;
+  height: 170px;
   background-image: url("https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp");
   background-size: contain;
   background-repeat: no-repeat;
