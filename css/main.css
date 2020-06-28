@@ -2009,7 +2009,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #612693;
+  background: #fff1ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3499,6 +3499,7 @@ pre {
   opacity: 1;
 }
 #veditor {
+  height: 150px;
   background-image: url("https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp");
   background-size: contain;
   background-repeat: no-repeat;
@@ -3519,6 +3520,9 @@ pre {
 .comments .vcards .vcard .vh .vcard {
   border: none;
   box-shadow: none;
+}
+img.vimg {
+  transition: all 1.5s /* 旋转时间为 1s */;
 }
 img.vimg:hover {
   -webkit-transform: rotate(360deg);
