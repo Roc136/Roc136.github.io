@@ -2009,7 +2009,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #12beff;
+  background: #c8707a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3505,6 +3505,10 @@ pre {
   background-position: bottom right;
   background-color: rgba(255,255,255,0);
   resize: vertical;
+}
+#veditor:focus {
+  background-position-y: 10000px;
+  transition: all 5s ease-in-out 0s;
 }
 .comments .vcards .vcard {
   padding: 15px 20px 0 20px;
