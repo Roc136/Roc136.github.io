@@ -146,7 +146,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,NexT,Blog,前端,博客,GitHub,RocSpace,博客,Hexo,Next,推送,百度,谷歌,统计" />
+  <meta name="keywords" content="Hexo,NexT,Blog,前端,博客,GitHub,RocSpace,博客,Hexo,Next,统计,热度" />
 
 
 
@@ -157,22 +157,20 @@
 
 
 
-<meta name="description" content="继续上一篇，本文将介绍如何在百度和谷歌添加推送。">
+<meta name="description" content="继续上一篇，本文将介绍添加文章热度，添加文章字数统计，阅读时长。 博主使用环境：Windows版本：Win10 2004教育版，64位；Node.js 版本：12.18.0-x64">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo+Next+GitHub博客搭建超详细教程--提升篇（2)">
 <meta property="og:url" content="https://blog.roc136.top/posts/blog-building/high-2/index.html">
 <meta property="og:site_name" content="RocSpace">
-<meta property="og:description" content="继续上一篇，本文将介绍如何在百度和谷歌添加推送。">
+<meta property="og:description" content="继续上一篇，本文将介绍添加文章热度，添加文章字数统计，阅读时长。 博主使用环境：Windows版本：Win10 2004教育版，64位；Node.js 版本：12.18.0-x64">
 <meta property="article:published_time" content="2020-07-10T13:50:17.000Z">
-<meta property="article:modified_time" content="2020-07-11T06:14:29.654Z">
+<meta property="article:modified_time" content="2020-07-16T04:50:44.180Z">
 <meta property="article:author" content="Roc">
 <meta property="article:tag" content="博客">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Next">
-<meta property="article:tag" content="推送">
-<meta property="article:tag" content="百度">
-<meta property="article:tag" content="谷歌">
 <meta property="article:tag" content="统计">
+<meta property="article:tag" content="热度">
 <meta name="twitter:card" content="summary">
 
 
@@ -351,6 +349,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-photos">
+          <a href="/photos/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-fas fa-camera-retro"></i> <br />
+            
+            背景
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-wall">
           <a href="/wall/" rel="section">
             
@@ -480,7 +488,6 @@
               </span>
             
           
-
           
           
              <span id="/posts/blog-building/high-2/" class="leancloud_visitors" data-flag-title="Hexo+Next+GitHub博客搭建超详细教程--提升篇（2)">
@@ -509,7 +516,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4
+                  298
                 </span>
               
 
@@ -533,7 +540,7 @@
 
           
               <div class="post-description">
-                  继续上一篇，本文将介绍如何在百度和谷歌添加推送。
+                  继续上一篇，本文将介绍添加文章热度，添加文章字数统计，阅读时长。<br/> 博主使用环境：Windows版本：Win10 2004教育版，64位；Node.js 版本：12.18.0-x64
               </div>
           
 
@@ -550,7 +557,21 @@
       
 
       
-        <p>暂无内容。</p>
+        <h3 id="一、添加热度"><a href="#一、添加热度" class="headerlink" title="一、添加热度"></a>一、添加热度</h3><p>打开<strong>主题配置文件</strong>，查找 <code>leancloud_visitors</code> ，修改 <code>enable</code> 为 <code>true</code> ，自行添加 <code>app_id</code> 和 <code>app_key</code> （和评论使用的leancloud相同）</p>
+<p>打开 <code>./themes/next/layout/_macro/post.swig</code> 文件，查找 <code>leancloud</code></p>
+<p>找到如下内容</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.leancloud_visitors.enable %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"&#123;&#123; url_for(post.path) &#125;&#125;"</span> <span class="attr">class</span>=<span class="string">"leancloud_visitors"</span> <span class="attr">data-flag-title</span>=<span class="string">"&#123;&#123; post.title &#125;&#125;"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-divider"</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-icon"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-eye"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      &#123;% if theme.post_meta.item_text %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-text"</span>&gt;</span>&#123;&#123;__('post.visitors')&#125;&#125;<span class="symbol">&amp;#58;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"leancloud-visitors-count"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>在 <code>&lt;span class=&quot;leancloud-visitors-count&quot;&gt;&lt;/span&gt;</code> 下面添加  <code>&lt;span&gt;°C&lt;/span&gt;</code></p>
+<p>打开语言文件 <code>./themes/next/languages/zh-Hans.yml</code> 文件，查找 <code>post</code></p>
+<p>将 <code>visitors</code> 的值改为 <code>热度</code> 即可。</p>
+<p>注：如果使用其他语言就对应修改其他的语言文件。</p>
+<h3 id="二、添加文章字数统计、阅读时长"><a href="#二、添加文章字数统计、阅读时长" class="headerlink" title="二、添加文章字数统计、阅读时长"></a>二、添加文章字数统计、阅读时长</h3><p><del>在博客根目录运行cmd，执行</del></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure></div>
+
+<p>打开<strong>主题配置文件</strong>，查找 <code>post_wordcount</code> 修改以下内容</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="YAML"><figure class="iseeu highlight /yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Post wordcount display settings</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/willin/hexo-wordcount</span></span><br><span class="line"><span class="attr">post_wordcount:</span></span><br><span class="line">  <span class="attr">item_text:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">wordcount:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">min2read:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></div>
+
 
       
     </div>
@@ -582,7 +603,7 @@
   <p><span>本文标题:</span><a href="/posts/blog-building/high-2/">Hexo+Next+GitHub博客搭建超详细教程--提升篇（2)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Roc 的个人博客">Roc</a></p>
   <p><span>发布时间:</span>2020年07月10日 - 21:50</p>
-  <p><span>最后更新:</span>2020年07月11日 - 14:14</p>
+  <p><span>最后更新:</span>2020年07月16日 - 12:50</p>
   <p><span>原始链接:</span><a href="/posts/blog-building/high-2/" title="Hexo+Next+GitHub博客搭建超详细教程--提升篇（2)">https://blog.roc136.top/posts/blog-building/high-2/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-copy" data-clipboard-text="https://blog.roc136.top/posts/blog-building/high-2/"  aria-label="复制成功！"></i></span>
   </p>
@@ -619,8 +640,6 @@
           
             <a href="/tags/Hexo/" <i class="fa fa-tag"></i> Hexo</a>
           
-            <a href="/tags/hide/" <i class="fa fa-tag"></i> hide</a>
-          
         </div>
       
 
@@ -656,6 +675,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/blog-building/end/" rel="prev" title="Hexo+Next+GitHub博客搭建超详细教程--补充篇">
+                Hexo+Next+GitHub博客搭建超详细教程--补充篇 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -710,14 +733,25 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.jpg"
-                alt="Roc" />
+              <a href='/'>
+                <img class="site-author-image" itemprop="image"
+                  src="/images/avatar.jpg"
+                  alt="Roc" />
+              </a>
             
               <p class="site-author-name" itemprop="name">Roc</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -730,7 +764,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -741,7 +775,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -788,6 +822,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、添加热度"><span class="nav-text">一、添加热度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、添加文章字数统计、阅读时长"><span class="nav-text">二、添加文章字数统计、阅读时长</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
       
       <!--背景音乐-->
@@ -851,7 +901,7 @@
   <div class="theme-info">
     <div class="powered-by"></div>
     <i class="fa fa-bar-chart" id="heart"></i>
-    <span class="post-count">博客全站共14.9k字</span>
+    <span class="post-count">博客全站共15.3k字</span>
   </div>
 
   <br/>
