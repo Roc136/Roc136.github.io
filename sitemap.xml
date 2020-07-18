@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.roc136.top/links/linklist.json</loc>
+    
+    <lastmod>2020-07-18T03:26:32.516Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.roc136.top/links/index.html</loc>
+    
+    <lastmod>2020-07-18T03:05:24.737Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.roc136.top/posts/blog-building/end/</loc>
     
     <lastmod>2020-07-16T08:08:37.807Z</lastmod>
@@ -19,20 +33,6 @@
     <loc>https://blog.roc136.top/posts/blog-building/beautify-1/</loc>
     
     <lastmod>2020-07-16T08:07:28.301Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.roc136.top/links/index.html</loc>
-    
-    <lastmod>2020-07-16T07:50:16.437Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.roc136.top/links/linklist.json</loc>
-    
-    <lastmod>2020-07-16T07:46:01.788Z</lastmod>
     
   </url>
   

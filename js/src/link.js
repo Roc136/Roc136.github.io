@@ -5,6 +5,10 @@ link = {
         $.getJSON("/links/linklist.json",
         function(data) {
             that.render(data);
+            // var num = document.createElement("div");
+            // num.innerHTML = data.length;
+            // var links = document.getElementById("links-count")
+            // links.appendChild(num);
         });
     },
     render: function(data) {
