@@ -1,1 +1,27 @@
-"use strict";var a_idx=0;function gc(){return"#"+Math.ceil(256*Math.random()).toString(16)+Math.ceil(256*Math.random()).toString(16)+Math.ceil(256*Math.random()).toString(16)}jQuery(document).ready(function(c){c("body").click(function(t){var a=new Array("♥富强♥","♥民主♥","♥文明♥","♥和谐♥","♥自由♥","♥平等♥","♥公正♥","♥法治♥","♥爱国♥","♥敬业♥","♥诚信♥","♥友善♥"),n=c("<span/>").text(a[a_idx]),i=t.pageX,o=t.pageY,e=gc();n.css({"z-index":99999,top:o-28,left:i-8*a[a_idx].length,position:"absolute",color:e}),c("body").append(n),n.animate({top:o-180,opacity:0},1500,function(){n.remove()}),a_idx=(a_idx+1)%a.length,gc()})});
+var a_idx = 0;
+jQuery(document).ready(function($) {
+  $("body").click(function(e) {
+    var a = new Array("♥富强♥", "♥民主♥", "♥文明♥", "♥和谐♥", "♥自由♥", "♥平等♥", "♥公正♥", "♥法治♥", "♥爱国♥", "♥敬业♥", "♥诚信♥", "♥友善♥");
+    var $i = $("<span/>").text(a[a_idx]);
+    var x = e.pageX,
+    y = e.pageY;
+	var c = gc();
+    $i.css({
+      "z-index": 99999,
+      "top": y - 28,
+      "left": x - a[a_idx].length * 8,
+      "position": "absolute",
+      "color": c
+    });
+    $("body").append($i);
+    $i.animate({
+      "top": y - 180,
+      "opacity": 0
+    }, 1500, function() {
+      $i.remove();
+    });
+    a_idx = (a_idx + 1) % a.length;
+	c = gc();
+  });
+});
+function gc(){var r=Math.ceil(Math.random()*256).toString(16);var g=Math.ceil(Math.random()*256).toString(16);var b=Math.ceil(Math.random() * 256).toString(16);return "#"+r+g+b}
