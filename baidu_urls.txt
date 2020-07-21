@@ -1,2 +1,2 @@
+https://blog.roc136.top/posts/notes/gdb/
 https://blog.roc136.top/posts/csapp/homework2/
-https://blog.roc136.top/posts/blog-building/end/
