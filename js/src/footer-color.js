@@ -96,41 +96,42 @@
         return rgbToHex(result[0],result[1],result[2]);
     }
 
-    function get_bg_color() {
-        return new Promise(resolve => {
-            const colorThief = new ColorThief();
-            const bg_img = new Image;
-            bg_img.crossOrigin = 'Anonymous';
-            bg_img.onload = function(){
-                var result = colorThief.getColor(bg_img)
-                var bg_color = "#"+result[0].toString(16) + result[1].toString(16) + result[2].toString(16);
-                resolve(bg_color);
-                var level = 1;
-                document.documentElement.style.setProperty("--brand-color", "rgb("+result[0]*level+","+result[1]*level+","+result[2]*level+")");
-                document.documentElement.style.setProperty("--site-meta-color", hksubcolor([255-result[0]*level,255-result[1]*level,255-result[2]*level]));
-                // console.log(result);
-                // console.log(bg_color);
-                // console.log(document.documentElement.style.getPropertyValue('--brand-color'));
-                // console.log(document.documentElement.style.getPropertyValue('--site-meta-color'));
-            }
-            bg_img.src = url;
-        });
-    }
-
-    function set_text_color(bg_color) {
-        if (typeof define === 'function' && define.amd) {
-            define('color-js' ,[], function() {
-                return TEXTColor;
-            });
+    (function () {
+        const colorThief = new ColorThief();
+        const bg_img = new Image;
+        bg_img.crossOrigin = 'Anonymous';
+        bg_img.onload = function(){
+            var result = colorThief.getColor(bg_img)
+            // var bg_color = "#"+result[0].toString(16) + result[1].toString(16) + result[2].toString(16);
+            // var ft_color = "rgb("+result[0]*level+","+result[1]*level+","+result[2]*level+")";
+            var bg_color = hksubcolor([255-result[0]*level,255-result[1]*level,255-result[2]*level]);
+            var level = 1;
+            document.documentElement.style.setProperty("--brand-color", "rgb("+result[0]*level+","+result[1]*level+","+result[2]*level+")");
+            document.documentElement.style.setProperty("--site-meta-color", bg_color);
+            document.documentElement.style.setProperty("--footer-ft-color", "rgb("+result[0]*level+","+result[1]*level+","+result[2]*level+")");
+            document.documentElement.style.setProperty("--footer-bg-color", bg_color);
+            // console.log(result);
+            // console.log(bg_color);
+            // console.log(document.documentElement.style.getPropertyValue('--brand-color'));
+            // console.log(document.documentElement.style.getPropertyValue('--site-meta-color'));
         }
-        // console.log("背景主题色"+bg_color);
-        var textcolor = TEXTColor.findTextColor(bg_color);
-        document.documentElement.style.setProperty("--footer-color", textcolor);
-        // console.log("footer字体颜色"+textcolor);
-    }
-
-    (async function() {
-        var bg_color = await get_bg_color();
-        set_text_color(bg_color);
+        bg_img.src = url;
     })();
+
+    // function set_text_color(bg_color) {
+    //     if (typeof define === 'function' && define.amd) {
+    //         define('color-js' ,[], function() {
+    //             return TEXTColor;
+    //         });
+    //     }
+    //     // console.log("背景主题色"+bg_color);
+    //     var textcolor = TEXTColor.findTextColor(bg_color);
+    //     document.documentElement.style.setProperty("--footer-color", textcolor);
+    //     // console.log("footer字体颜色"+textcolor);
+    // }
+
+    // (async function() {
+    //     var bg_color = await get_bg_color();
+    //     set_text_color(bg_color);
+    // })();
 })();
