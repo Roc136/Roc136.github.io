@@ -1,1 +1,0 @@
-"use strict";var link={init:function(){$.getJSON("/links/linklist.json",function(n){var i=document.createElement("div");i.innerHTML=n.length,document.getElementById("links-count").appendChild(i)})}};link.init();
