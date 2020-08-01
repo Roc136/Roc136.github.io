@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.roc136.top/links/index.html</loc>
+    
+    <lastmod>2020-08-01T10:44:16.972Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.roc136.top/posts/zuan/</loc>
     
     <lastmod>2020-07-31T08:06:25.466Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://blog.roc136.top/wall/index.html</loc>
     
     <lastmod>2020-07-31T06:41:02.759Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.roc136.top/links/index.html</loc>
-    
-    <lastmod>2020-07-31T02:26:42.534Z</lastmod>
     
   </url>
   
