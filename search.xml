@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>mysql如何查看用户及其权限</title>
+      <link href="/posts/sql-users-grants/"/>
+      <url>/posts/sql-users-grants/</url>
+      
+        <content type="html"><![CDATA[<h3 id="【1】查看mysql数据库中的所有用户"><a href="#【1】查看mysql数据库中的所有用户" class="headerlink" title="【1】查看mysql数据库中的所有用户"></a>【1】查看mysql数据库中的所有用户</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> <span class="keyword">CONCAT</span>(<span class="string">'User: '''</span>,<span class="keyword">user</span>,<span class="string">'''@'''</span>,host,<span class="string">''';'</span>) <span class="keyword">AS</span> <span class="keyword">query</span> <span class="keyword">FROM</span> mysql.user;</span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-src="https://blog-roc.oss-cn-hongkong.aliyuncs.com/blog/sql-users-grants/20190708122447933.png" alt=""></p><h3 id="【2】查看某个用户的权限"><a href="#【2】查看某个用户的权限" class="headerlink" title="【2】查看某个用户的权限"></a>【2】查看某个用户的权限</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">grants</span> <span class="keyword">for</span> <span class="string">'nextcloud'</span>@<span class="string">'%'</span>; </span><br><span class="line"><span class="comment">-- or</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> mysql.user <span class="keyword">where</span> <span class="keyword">user</span>=<span class="string">'root'</span> \G;</span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-src="https://blog-roc.oss-cn-hongkong.aliyuncs.com/blog/sql-users-grants/20190708122715379.png" alt=""></p><h3 id="【3】查看当前用户"><a href="#【3】查看当前用户" class="headerlink" title="【3】查看当前用户"></a>【3】查看当前用户</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select user();</span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-src="https://blog-roc.oss-cn-hongkong.aliyuncs.com/blog/sql-users-grants/20190708122842656.png" alt=""></p><h3 id="【4】修改用户密码"><a href="#【4】修改用户密码" class="headerlink" title="【4】修改用户密码"></a>【4】修改用户密码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">UPDATE user SET password&#x3D;PASSWORD(&#39;新密码&#39;) WHERE user&#x3D;&#39;用户&#39;;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure><h3 id="【5】修改用户权限及密码"><a href="#【5】修改用户权限及密码" class="headerlink" title="【5】修改用户权限及密码"></a>【5】修改用户权限及密码</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- grant 权限 on 库名.表名 to '用户名'@’网段‘  identified by  "该用户的密码"；</span></span><br><span class="line"><span class="keyword">grant</span> <span class="keyword">all</span> <span class="keyword">privileges</span> <span class="keyword">on</span> nextcloud.* <span class="keyword">to</span> <span class="string">'nextcloud'</span>@<span class="string">'%'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'du..olctx..entest.1'</span>;</span><br></pre></td></tr></table></figure><h3 id="【6】删除用户"><a href="#【6】删除用户" class="headerlink" title="【6】删除用户"></a>【6】删除用户</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">user</span> <span class="string">'nextcloud'</span>@<span class="string">'%'</span>;</span><br></pre></td></tr></table></figure><p>转载自：</p><p><a href="https://blog.csdn.net/GX_1_11_real/article/details/95052475" target="_blank" rel="noopener">https://blog.csdn.net/GX_1_11_real/article/details/95052475</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> mysql </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+            <tag> 用户 </tag>
+            
+            <tag> 权限 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>震撼心灵，催人泪下-《向南2：会飞的梦》南京大学2020年招生微电影</title>
       <link href="/posts/xiangnan2/"/>
       <url>/posts/xiangnan2/</url>
@@ -195,7 +224,7 @@
       <link href="/posts/notes/gdb/"/>
       <url>/posts/notes/gdb/</url>
       
-        <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">layout regs &#x2F;&#x2F;打开寄存器窗口</span><br><span class="line">layout asm &#x2F;&#x2F;打开汇编代码窗口</span><br><span class="line">disassemble &#x2F;&#x2F;查看汇编代码</span><br><span class="line">set disassemble-next-line on &#x2F;&#x2F;可以查看下一条指令的汇编代码</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">layout regs &#x2F;&#x2F;打开寄存器窗口</span><br><span class="line">layout asm &#x2F;&#x2F;打开汇编代码窗口</span><br><span class="line">disassemble &#x2F;&#x2F;查看汇编代码</span><br><span class="line">set disassemble-next-line on &#x2F;&#x2F;可以查看下一条指令的汇编代码</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">查看当前程序栈的内容: x&#x2F;10x $sp--&gt;打印stack的前10个元素</span><br><span class="line">查看当前程序栈的信息: info frame----list general info about the frame</span><br><span class="line">查看当前程序栈的参数: info args---lists arguments to the function</span><br><span class="line">查看当前程序栈的局部变量: info locals---list variables stored in the frame</span><br><span class="line">查看当前寄存器的值：info registers(不包括浮点寄存器) info all-registers(包括浮点寄存器)</span><br><span class="line">查看当前栈帧中的异常处理器：info catch(exception handlers)</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
