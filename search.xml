@@ -15,16 +15,16 @@
           
           <category> VMware </category>
           
-          <category> Linux </category>
+          <category> linux </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Vmware </tag>
+            <tag> linux </tag>
             
-            <tag> Linux </tag>
+            <tag> Vmware </tag>
             
             <tag> 虚拟机 </tag>
             
