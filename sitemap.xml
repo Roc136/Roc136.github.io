@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.roc136.top/posts/notes/gdb/</loc>
+    
+    <lastmod>2020-11-01T06:47:32.475Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.roc136.top/posts/bayes/</loc>
+    
+    <lastmod>2020-11-01T05:55:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.roc136.top/posts/vmware/</loc>
     
     <lastmod>2020-10-25T17:40:36.318Z</lastmod>
@@ -82,13 +96,6 @@
     <loc>https://blog.roc136.top/posts/sql-users-grants/</loc>
     
     <lastmod>2020-08-04T14:34:21.290Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.roc136.top/posts/notes/gdb/</loc>
-    
-    <lastmod>2020-08-02T08:40:38.623Z</lastmod>
     
   </url>
   
