@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.roc136.top/posts/notes/gdb/</loc>
-    <lastmod>2020-11-01</lastmod>
+    <loc>https://blog.roc136.top/posts/nlp1/</loc>
+    <lastmod>2020-11-08</lastmod>
   </url>  <url>
     <loc>https://blog.roc136.top/posts/bayes/</loc>
+    <lastmod>2020-11-07</lastmod>
+  </url>  <url>
+    <loc>https://blog.roc136.top/posts/blog-building/high-2/</loc>
+    <lastmod>2020-11-07</lastmod>
+  </url>  <url>
+    <loc>https://blog.roc136.top/posts/blog-building/high-1/</loc>
+    <lastmod>2020-11-07</lastmod>
+  </url>  <url>
+    <loc>https://blog.roc136.top/posts/blog-building/end/</loc>
+    <lastmod>2020-11-07</lastmod>
+  </url>  <url>
+    <loc>https://blog.roc136.top/posts/blog-building/beginning/</loc>
+    <lastmod>2020-11-07</lastmod>
+  </url>  <url>
+    <loc>https://blog.roc136.top/posts/blog-building/beautify-4/</loc>
+    <lastmod>2020-11-07</lastmod>
+  </url>  <url>
+    <loc>https://blog.roc136.top/posts/blog-building/beautify-3/</loc>
+    <lastmod>2020-11-07</lastmod>
+  </url>  <url>
+    <loc>https://blog.roc136.top/posts/blog-building/beautify-2/</loc>
+    <lastmod>2020-11-07</lastmod>
+  </url>  <url>
+    <loc>https://blog.roc136.top/posts/blog-building/beautify-1/</loc>
+    <lastmod>2020-11-07</lastmod>
+  </url>  <url>
+    <loc>https://blog.roc136.top/posts/notes/gdb/</loc>
     <lastmod>2020-11-01</lastmod>
   </url>  <url>
     <loc>https://blog.roc136.top/posts/vmware/</loc>
@@ -48,30 +75,6 @@
   </url>  <url>
     <loc>https://blog.roc136.top/posts/gdbwarning/</loc>
     <lastmod>2020-07-26</lastmod>
-  </url>  <url>
-    <loc>https://blog.roc136.top/posts/blog-building/end/</loc>
-    <lastmod>2020-07-16</lastmod>
-  </url>  <url>
-    <loc>https://blog.roc136.top/posts/blog-building/high-2/</loc>
-    <lastmod>2020-07-16</lastmod>
-  </url>  <url>
-    <loc>https://blog.roc136.top/posts/blog-building/beautify-1/</loc>
-    <lastmod>2020-07-16</lastmod>
-  </url>  <url>
-    <loc>https://blog.roc136.top/posts/blog-building/high-1/</loc>
-    <lastmod>2020-07-16</lastmod>
-  </url>  <url>
-    <loc>https://blog.roc136.top/posts/blog-building/beautify-4/</loc>
-    <lastmod>2020-06-24</lastmod>
-  </url>  <url>
-    <loc>https://blog.roc136.top/posts/blog-building/beautify-3/</loc>
-    <lastmod>2020-06-24</lastmod>
-  </url>  <url>
-    <loc>https://blog.roc136.top/posts/blog-building/beautify-2/</loc>
-    <lastmod>2020-06-24</lastmod>
-  </url>  <url>
-    <loc>https://blog.roc136.top/posts/blog-building/beginning/</loc>
-    <lastmod>2020-06-18</lastmod>
   </url>  <url>
     <loc>https://blog.roc136.top/posts/live2d/</loc>
     <lastmod>2020-06-16</lastmod>
