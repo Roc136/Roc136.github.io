@@ -6,8 +6,8 @@ Allow: /categories/
 Allow: /tags/
 Allow: /others/
 Allow: /wall/
-Disallow: /js/
-Disallow: /css/
+Allow: /js/
+Allow: /css/
 Disallow: /lib/
 Disallow: /live2d-widget/
 Disallow: /images/
