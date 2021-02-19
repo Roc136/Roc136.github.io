@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.roc136.top/posts/blog-building/beginning/</loc>
+    
+    <lastmod>2021-02-19T12:02:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.roc136.top/posts/ubuntu-install/</loc>
     
-    <lastmod>2021-01-30T12:58:12.000Z</lastmod>
+    <lastmod>2021-02-19T11:35:20.000Z</lastmod>
     
   </url>
   
@@ -40,13 +47,6 @@
     <loc>https://blog.roc136.top/posts/blog-building/end/</loc>
     
     <lastmod>2020-11-07T10:04:39.640Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.roc136.top/posts/blog-building/beginning/</loc>
-    
-    <lastmod>2020-11-07T10:04:30.352Z</lastmod>
     
   </url>
   
