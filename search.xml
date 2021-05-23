@@ -46,7 +46,7 @@
           
           <category> NLP </category>
           
-          <category> 分类 </category>
+          <category> 二分类 </category>
           
       </categories>
       
@@ -193,7 +193,7 @@
           
           <category> NLP </category>
           
-          <category> 分类 </category>
+          <category> 二分类 </category>
           
       </categories>
       
