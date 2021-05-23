@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>二分类学习-分类模型的评价指标（AUC）</title>
+      <link href="/posts/auc/"/>
+      <url>/posts/auc/</url>
+      
+        <content type="html"><![CDATA[<p>二分类常用的评价指标是 AUC(Area Under Curve)，也就是ROC曲线和x轴之间的面积。</p><h2 id="1-什么是ROC曲线（Wiki）"><a href="#1-什么是ROC曲线（Wiki）" class="headerlink" title="1. 什么是ROC曲线（Wiki）"></a>1. 什么是ROC曲线（<a href="https://zh.wikipedia.org/wiki/ROC%E6%9B%B2%E7%BA%BF" target="_blank" rel="noopener">Wiki</a>）</h2><p>在了解AUC之前首先需要知道ROC曲线。在<a href="https://zh.wikipedia.org/wiki/信号检测理论" target="_blank" rel="noopener">信号检测理论</a>中，<strong>接收者操作特征曲线</strong>（<strong>receiver operating characteristic curve</strong>，即<strong>ROC曲线</strong>）是一种坐标图式的分析工具，用于 (1) 选择最佳的信号侦测模型、舍弃次佳的模型。 (2) 在同一模型中设定最佳<a href="https://zh.wikipedia.org/wiki/阈值" target="_blank" rel="noopener">阈值</a>。</p><p>在做决策时，ROC分析能不受成本/效益的影响，给出客观中立的建议。</p><h2 id="2-一些术语"><a href="#2-一些术语" class="headerlink" title="2. 一些术语"></a>2. 一些术语</h2><table align="center" style="border: thin solid"><tbody><tr><th colspan="2" rowspan="2">&nbsp;</th><th colspan="2" align="center">真实值</th><th rowspan="2">总数</th></tr><tr><th><i>p</i></th><th><i>n</i></th></tr><tr><th rowspan="2" valign="middle">预<br>测<br>输<br>出</th><th valign="middle" style="padding:0.5em;"><i>p'</i></th><th style="padding:0.5em;">真阳性<br>(TP)</th><th style="padding:0.5em;">伪阳性<br>(FP)</th><th style="padding:0.5em;">P'</th></tr><tr><th valign="middle" style="padding:0.5em;"><i>n'</i></th><th style="padding: 0.5em;">伪阴性<br>(FN)</th><th style="padding:0.5em;">真阴性<br>(TN)</th><th style="padding:0.5em;">N'</th></tr><tr><th colspan="2" style="padding:0.5em;">总数</th><th align="center">P</th><th align="center">N</th><th></th></tr></tbody></table><p>下面所有的内容都是基于此混淆矩阵的。</p><h4 id="TP（真阳性）"><a href="#TP（真阳性）" class="headerlink" title="TP（真阳性）"></a>TP（真阳性）</h4><p>true positives，即正例被判定为正例的数量</p><h4 id="TN（真阴性）"><a href="#TN（真阴性）" class="headerlink" title="TN（真阴性）"></a>TN（真阴性）</h4><p>true negatives，即范例被判定为反例的数量</p><h4 id="FP（伪阳性）"><a href="#FP（伪阳性）" class="headerlink" title="FP（伪阳性）"></a>FP（伪阳性）</h4><p>false positives，即反例被判定为正例的数量</p><h4 id="FN（伪阴性）"><a href="#FN（伪阴性）" class="headerlink" title="FN（伪阴性）"></a>FN（伪阴性）</h4><p>false negative，即正例被判定为反例的数量</p><h4 id="TPR（真阳性率）"><a href="#TPR（真阳性率）" class="headerlink" title="TPR（真阳性率）"></a>TPR（真阳性率）</h4><p>true positives rate，又称：命中率 (hit rate)、敏感度(sensitivity)</p><p>$ TPR = \frac{TP}{P} = \frac{TP}{TP+FN}$</p><h4 id="FPR（伪阳性率）"><a href="#FPR（伪阳性率）" class="headerlink" title="FPR（伪阳性率）"></a>FPR（伪阳性率）</h4><p>false positive rate，又称：错误命中率，假警报率 (false alarm rate)</p><p>$ FPR = \frac{FP}{N} = {FP}{FP + TN}$</p><h4 id="ACC（准确度）"><a href="#ACC（准确度）" class="headerlink" title="ACC（准确度）"></a>ACC（准确度）</h4><p>accuracy，(真阳性+真阴性) / 总样本数</p><p>$ACC = \frac{TP + TN}{P + N}$</p><h4 id="Precision（精确率）"><a href="#Precision（精确率）" class="headerlink" title="Precision（精确率）"></a>Precision（精确率）</h4><p>$Precision = \frac{TP}{TP+FP}$ ，即当前划分到正样本类别中，被正确分类的比例。</p><h4 id="Recall（召回率）"><a href="#Recall（召回率）" class="headerlink" title="Recall（召回率）"></a>Recall（召回率）</h4><p>$Recall = TPR$ ，即所有的正样本类别中，被正确划分到正样本的比例（召回了多少正样本比例）。</p><h4 id="Loss-（损失率）"><a href="#Loss-（损失率）" class="headerlink" title="Loss （损失率）"></a>Loss （损失率）</h4><p>待确定</p><h4 id="F1-Score"><a href="#F1-Score" class="headerlink" title="F1-Score"></a>F1-Score</h4><p>F-Score 是 Precision 和 Recall 的加权调和平均，即</p><p>$\frac{1}{F} = \frac{1}{\alpha^2+1}\frac{1}{P}+\frac{\alpha^2}{\alpha^2+1}\frac{1}{R}$</p><p>$F=\frac{(\alpha^2+1)P*R}{\alpha^2P+R}$</p><p>当 $\alpha=1$ 时，F-Score 就是 F1-Score：</p><p>$\frac{1}{F1}=\frac{1}{2}(\frac{1}{P}+\frac{1}{R})$</p><p>$ F1=\frac{2PR}{P+R}$</p><h2 id="3-ROC空间"><a href="#3-ROC空间" class="headerlink" title="3. ROC空间"></a>3. ROC空间</h2><p>ROC空间将伪阳性率（FPR）定义为 <em>X</em> 轴，真阳性率（TPR）定义为 <em>Y</em> 轴。</p><p><strong>给定</strong>一个二元分类<strong>模型</strong>和它的<strong>阈值</strong>，就能从所有样本的（阳性／阴性）真实值和预测值计算出一个 (X=FPR, Y=TPR) 座标点。</p><p>从 (0, 0) 到 (1,1) 的对角线将ROC空间划分为左上／右下两个区域，在这条线的以上的点代表了一个好的分类结果（胜过随机分类），而在这条线以下的点代表了差的分类结果（劣于随机分类）。</p><p><strong>完美的预测</strong>是一个在左上角的点，在ROC空间座标 (0,1)点，X=0 代表着没有伪阳性，Y=1 代表着没有伪阴性（所有的阳性都是真阳性）；也就是说，不管分类器输出结果是阳性或阴性，都是100%正确。一个<strong>随机的预测</strong>会得到位于从 (0, 0) 到 (1, 1) <strong>对角线</strong>（也叫<strong>无识别率线</strong>）上的一个点；最直观的随机预测的例子就是抛硬币。</p><h2 id="4-ROC-曲线"><a href="#4-ROC-曲线" class="headerlink" title="4. ROC 曲线"></a>4. ROC 曲线</h2><p>上述ROC空间里的单点，是给定分类模型且给定阈值后得出的。但同一个<a href="https://zh.wikipedia.org/w/index.php?title=二元分類模型&action=edit&redlink=1" target="_blank" rel="noopener">二元分类模型</a>的<a href="https://zh.wikipedia.org/wiki/阈值" target="_blank" rel="noopener">阈值</a>可能设定为高或低，每种阈值的设定会得出不同的FPR和TPR。</p><ul><li>将<strong>同一模型每个阈值</strong> 的 (FPR, TPR) 座标都画在ROC空间里，就成为<strong>特定模型的ROC曲线</strong>。</li></ul><h2 id="5-AUC"><a href="#5-AUC" class="headerlink" title="5. AUC"></a>5. AUC</h2><p>ROC曲线下方的面积（英语：Area under the Curve of ROC (AUC ROC)），其意义是：</p><ul><li>因为是在1x1的方格里求面积，AUC必在0~1之间。</li><li>假设阈值以上是阳性，以下是阴性；</li><li>若随机抽取一个阳性样本和一个阴性样本，分类器<strong>正确判断</strong>阳性样本的值高于阴性样本之<strong>几率</strong> 。</li><li>简单说：<strong>AUC值越大的分类器，正确率越高。</strong></li></ul><p>从AUC判断分类器（预测模型）优劣的标准：</p><ul><li>AUC = 1，是完美分类器，采用这个预测模型时，存在至少一个阈值能得出完美预测。绝大多数预测的场合，不存在完美分类器。</li><li>0.5 &lt; AUC &lt; 1，优于随机猜测。这个分类器（模型）妥善设定阈值的话，能有预测价值。</li><li>AUC = 0.5，跟随机猜测一样（例：丢铜板），模型没有预测价值。</li><li>AUC &lt; 0.5，比随机猜测还差；但只要总是反预测而行，就优于随机猜测。</li></ul><h2 id="6-AUC-计算方法"><a href="#6-AUC-计算方法" class="headerlink" title="6. AUC 计算方法"></a>6. AUC 计算方法</h2><p>二者都是逼近法求近似值</p><h3 id="1）梯形法"><a href="#1）梯形法" class="headerlink" title="1）梯形法"></a>1）梯形法</h3><p>简单地将每个相邻的点以直线连接，计算连线下方的总面积。因为每一线段下方都是一个梯形，所以叫<strong>梯形法</strong>。</p><ul><li>优点：简单，所以常用。</li><li>缺点：倾向于低估AUC。</li></ul><h3 id="2）ROC-AUCH法"><a href="#2）ROC-AUCH法" class="headerlink" title="2）ROC AUCH法"></a>2）ROC AUCH法</h3><p>暂无。</p><hr><p>参考：</p><p><a href="https://testerhome.com/topics/10527" target="_blank" rel="noopener">https://testerhome.com/topics/10527</a></p><p><a href="https://zh.wikipedia.org/wiki/ROC%E6%9B%B2%E7%BA%BF" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/ROC%E6%9B%B2%E7%BA%BF</a></p><p><a href="https://www.jianshu.com/p/be2e037900a1" target="_blank" rel="noopener">https://www.jianshu.com/p/be2e037900a1</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> NLP </category>
+          
+          <category> 二分类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> NLP </tag>
+            
+            <tag> 二分类 </tag>
+            
+            <tag> AUC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>二分类学习思维导图</title>
       <link href="/posts/binclassify/"/>
       <url>/posts/binclassify/</url>
