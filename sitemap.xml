@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.roc136.top/links/index.html</loc>
+    
+    <lastmod>2021-06-11T07:50:39.070Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.roc136.top/links/linklist.json</loc>
     
     <lastmod>2021-06-11T07:44:56.232Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://blog.roc136.top/posts/binclassification/</loc>
     
     <lastmod>2021-05-30T05:23:49.462Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.roc136.top/links/index.html</loc>
-    
-    <lastmod>2021-05-23T17:05:23.322Z</lastmod>
     
   </url>
   
