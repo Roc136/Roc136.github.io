@@ -1,5 +1,5 @@
 https://blog.roc136.top/posts/auc/
-https://blog.roc136.top/posts/binclassification/
 https://blog.roc136.top/posts/binclassify/
 https://blog.roc136.top/posts/recommend/vsc-snippets/
 https://blog.roc136.top/posts/mirai-install/
+https://blog.roc136.top/posts/ubuntu-install/
