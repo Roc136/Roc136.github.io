@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Allow: /posts/
+Allow: /about/
+Allow: /categories/
+Allow: /tags/
+Allow: /others/
+Allow: /wall/
+Allow: /js/
+Allow: /css/
+Disallow: /lib/
+Disallow: /live2d-widget/
+Disallow: /images/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+Disallow: /categories/
+
+Sitemap: https://roc136.github.io/sitemap.xml
+Sitemap: https://roc136.github.io/baidusitemap.xml
+Sitemap: https://blog.roc136.top/sitemap.xml
+Sitemap: https://blog.roc136.top/baidusitemap.xml
